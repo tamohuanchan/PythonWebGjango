@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title%}{{ desideorio.title}}{% endblock %}
+
+{% block content %}
+    <h1 class="mt-5">{{ desideorio.title}}</h1>
+    <h2>Категория: {{desideorio.category}}</h2>
+    <p>Стоимость: {{desideorio.price}}</p>
+    <p>Количество желающих: {{comments_qty}}</p>
+    <button class="btn btn-primary">Хочу</button>
+{% endblock %}

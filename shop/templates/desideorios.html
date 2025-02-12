@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Все хотелки{% endblock %}
+
+{% block content %}
+
+<table class="table mt-5 table-bordered table-striped table-hover ">
+    <thead class="table-dark">
+        <tr>
+            <th>Наименование</th>
+            <th>Категория</th>
+            <th>Стоимость</th>
+            <th>Количество желающих</th>
+            <th></th>
+        </tr>
+    <tbody>
+        {% for desideorio in desideorios %}
+        <tr>
+            <td>
+                <a href="">{{ desideorio.title }}</a>
+            </td>
+            <td>{{ desideorio.category }}</td>
+            <td>{{ desideorio.price }}</td>
+            <td>{{ desideorio.donat_qty }}</td>
+            <td><button class="btn btn-primary">Тоже хочу</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </thead></table>
+{% endblock %}
